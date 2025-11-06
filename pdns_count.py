@@ -5,12 +5,13 @@ import socket
 import json
 import os
 from datetime import datetime, timezone
-
+from dotenv import load_dotenv
+load_dotenv()
 # ============ CONFIG ============
 API_URL = "http://162.247.153.49/api/metrics"
-INTERFACE = "eno1"  # Adjust this for your PowerDNS server
+INTERFACE = os.getenv("INTERFACE")  # Adjust this for your PowerDNS server
 STATE_FILE = "/tmp/pdns_metrics_state.json"
-SERVER_NAME = "NS-3"
+SERVER_NAME = os.getenv("NAME")
 # ================================
 
 def read_rx_packets(interface):
