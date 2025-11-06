@@ -152,7 +152,7 @@ def main():
         "disk_write_mb": round(disk_write_mb, 2),
         "disk_read_mb_per_min": round(disk_read_mb_per_min, 2),
         "disk_write_mb_per_min": round(disk_write_mb_per_min, 2),
-        "pdns_request_count_per_min": round(requests_per_min, 2),
+        "nginx_request_count_per_min": round(requests_per_min, 2),
     }
 
     try:
